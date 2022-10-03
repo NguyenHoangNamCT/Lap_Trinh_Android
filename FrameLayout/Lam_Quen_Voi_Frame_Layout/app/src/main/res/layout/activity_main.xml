@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    textview này không thấy được vì nó khai báo đầu tiên và bị tấm hình sau đó đè lên-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alo"
+        android:textSize="20sp"
+        android:textColor="#384"
+        android:layout_gravity="center">
+    </TextView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/android_img1"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lập trình android"
+        android:textSize="45sp"
+        android:textColor="#E41616"
+        android:layout_gravity="center">
+    </TextView>
+</FrameLayout>
