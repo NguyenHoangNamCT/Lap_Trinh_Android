@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--    android:weightSum="10" tức là chia layout thành 10 phần theo chiều mà orientation quy định-->
+<LinearLayout
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_weight="2"
+            android:background="#E4CF13"
+            android:textColor="#F6095A"
+            android:textSize="30sp"
+            android:text="I am learning xml"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Còn non"
+            android:textSize="30dp"
+            android:background="#09AEF8"
+            android:textColor="#BC0CDA"
+            android:layout_weight="1">
+        </TextView>
+    </LinearLayout>
+    <!--
+    "match_parent" là lấp đầy khung chứa nó
+    android:layout_weight="1" là độ ưu tiên để hiển thị càng thấp ưu tiên càng cao bắt đầu từ 0
+    android:layout_weight="1" trong trường hợp chia layout thành 10 phần thì thuộc tính này là tỉ lệ hiển thị của nó trên 10 phần
+
+    tỉ lệ hiển thị textview từ trên xuống là 1-2-3-4
+    -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Chiem 1 phan"
+            android:textSize="30dp"
+            android:background="#FF9800"
+            android:textColor="#FFE504"
+            android:layout_weight="1">
+        </TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Chiem 3 phan"
+            android:textSize="30dp"
+            android:background="#09FAE3"
+            android:textColor="#DA00FF"
+            android:layout_weight="3">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_weight="3"
+        android:background="#BD73CA"
+        android:textColor="#5E4191"
+        android:textSize="30sp"
+        android:text="I am learning android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </TextView>
+
+    <TextView
+        android:layout_weight="4"
+        android:background="#87F30B"
+        android:textColor="#03A9F4"
+        android:textSize="30sp"
+        android:text="i am learning code"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </TextView>
+
+</LinearLayout>
+
