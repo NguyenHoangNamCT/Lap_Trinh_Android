@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    android:stretchColumns="*" tức là khoảng cách của các cột trong table layout sẽ được giãn đều ra-->
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TableRow>
+<!--        android:layout_span="2" tức là nó chiếm 2 ô-->
+        <TextView
+            android:text="Dòng 1 cột 1"
+            android:textSize="24sp"
+            android:background="#FFEB3B"
+            android:layout_span="2">
+        </TextView>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Dòng 2 cột 1"
+            android:textSize="24sp"
+            android:background="#FFEB3B">
+        </TextView>
+<!--        android:layout_span="100" nó chiếm 100 ô nhưng do hàng lớn nhất là 4 ô nên nó chỉ chiếm được 4 ô-->
+        <TextView
+            android:text="Dòng 2 cột 2"
+            android:textSize="24sp"
+            android:background="#FFEB3B"
+            android:layout_span="100">
+        </TextView>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Dòng 3 cột 1"
+            android:textSize="24sp"
+            android:background="#FFEB3B">
+        </TextView>
+        <TextView
+            android:text="Dòng 3 cột 2"
+            android:textSize="24sp"
+            android:background="#FFEB3B">
+        </TextView>
+        <TextView
+            android:text="Dòng 3 cột 3"
+            android:textSize="24sp"
+            android:background="#FFEB3B">
+        </TextView>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Dòng 4 cột 1"
+            android:textSize="24sp"
+            android:background="#FFEB3B">
+        </TextView>
+        <TextView
+            android:text="Dòng 4 cột 2"
+            android:textSize="24sp"
+            android:background="#FFEB3B">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:background="#FFEB3B"
+            android:text="Dòng 4 cột 3"
+            android:textSize="24sp"></TextView>
+        <TextView
+            android:text="Dòng 4 cột 4"
+            android:textSize="24sp"
+            android:background="#FFEB3B">
+        </TextView>
+    </TableRow>
+</TableLayout>
