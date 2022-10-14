@@ -64,25 +64,24 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="Chiem 3 phan"
-            android:textSize="30dp"
+            android:layout_weight="3"
             android:background="#09FAE3"
+            android:text="Chiem 3 phan"
             android:textColor="#DA00FF"
-            android:layout_weight="3">
+            android:textSize="30dp">
 
         </TextView>
 
     </LinearLayout>
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="3"
         android:background="#BD73CA"
-        android:textColor="#5E4191"
-        android:textSize="30sp"
         android:text="I am learning android"
-        android:layout_width="match_parent"
-        android:layout_height="0dp">
-    </TextView>
+        android:textColor="#5E4191"
+        android:textSize="30sp"></TextView>
 
     <TextView
         android:layout_weight="4"
