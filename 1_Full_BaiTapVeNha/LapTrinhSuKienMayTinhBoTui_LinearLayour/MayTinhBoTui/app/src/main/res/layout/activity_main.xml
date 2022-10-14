@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Các kiểu lập trình sự kiện"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:background="#0694D5">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="5">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Số a: "
+                android:textSize="14sp"
+                android:gravity="center">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Số b: "
+                android:textSize="14sp"
+                android:gravity="center">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:weightSum="2"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/txtSoA"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </EditText>
+            <EditText
+                android:id="@+id/txtSoB"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/lblKetQua"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#0080FF">
+    </TextView>
+    <Button
+        android:id="@+id/btnTong2So"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Tổng 2 số"
+        android:onClick="btnTong2So_Click">
+    </Button>
+    <Button
+        android:id="@+id/btnHieu2So"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Hiệu 2 số">
+    </Button>
+    <Button
+        android:id="@+id/btnTich2So"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Tích 2 số">
+    </Button>
+    <Button
+        android:id="@+id/btnThuong2So"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Thương 2 số">
+    </Button>
+    <Button
+        android:id="@+id/btnUocChungLonNhat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Ước chung lớn nhất">
+    </Button>
+    <Button
+        android:id="@+id/btnThoatChuongTrinh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Thoát chương trình">
+    </Button>
+</LinearLayout>
