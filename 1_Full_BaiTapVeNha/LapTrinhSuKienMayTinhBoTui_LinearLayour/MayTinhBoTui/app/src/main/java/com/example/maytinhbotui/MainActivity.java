@@ -14,10 +14,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        txtSoA = (EditText) findViewById(R.id.txtSoA);
-        txtSoB = (EditText) findViewById(R.id.txtSoB);
-        lblKetQua = (TextView)findViewById(R.id.lblKetQua);
+//        setContentView(R.layout.activity_main);
+//        txtSoA = (EditText) findViewById(R.id.txtSoA);
+//        txtSoB = (EditText) findViewById(R.id.txtSoB);
+//        lblKetQua = (TextView)findViewById(R.id.lblKetQua);
     }
 
     public void btnTong2So_Click(View v) {
@@ -26,6 +26,6 @@ public class MainActivity extends AppCompatActivity {
         double soA = Double.parseDouble(txtSoA.getText().toString());
         double soB = Double.parseDouble(txtSoB.getText().toString());
 
-        lblKetQua.setText(soB+soA+"");
+//        lblKetQua.setText(soB+soA+"");
     }
 }
