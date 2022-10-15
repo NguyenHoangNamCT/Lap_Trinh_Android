@@ -51,12 +51,13 @@
             android:layout_weight="4"
             android:weightSum="2"
             android:orientation="vertical">
+
             <EditText
                 android:id="@+id/txtSoA"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
-            </EditText>
+                android:layout_weight="1"></EditText>
+
             <EditText
                 android:id="@+id/txtSoB"
                 android:layout_width="match_parent"
@@ -70,7 +71,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#0080FF">
+        android:background="#0080FF"
+        android:gravity="center"
+        android:textSize="16sp">
     </TextView>
     <Button
         android:id="@+id/btnTong2So"
@@ -85,34 +88,39 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="Hiệu 2 số">
+        android:text="Hiệu 2 số"
+        android:onClick="btnHieu2So_Click">
     </Button>
     <Button
         android:id="@+id/btnTich2So"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="Tích 2 số">
+        android:text="Tích 2 số"
+        android:onClick="btnTich2So_click">
     </Button>
     <Button
         android:id="@+id/btnThuong2So"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="Thương 2 số">
+        android:text="Thương 2 số"
+        android:onClick="btnThuong2So_click">>
     </Button>
     <Button
         android:id="@+id/btnUocChungLonNhat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="Ước chung lớn nhất">
+        android:text="Ước chung lớn nhất"
+        android:onClick="btnUocChungLonNhat_click">>
     </Button>
     <Button
         android:id="@+id/btnThoatChuongTrinh"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="Thoát chương trình">
+        android:text="Thoát chương trình"
+        android:onClick="btnThoatChuongTrinh_click">>
     </Button>
 </LinearLayout>
