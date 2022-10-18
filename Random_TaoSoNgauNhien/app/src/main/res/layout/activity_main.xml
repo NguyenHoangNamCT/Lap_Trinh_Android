@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/edtMin"
+            android:layout_weight="1"
+            android:hint="Nhập min"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <EditText
+            android:id="@+id/edtMax"
+            android:layout_weight="1"
+            android:hint="Nhập max"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp">
+        </EditText>
+    </TableRow>
+
+    <TableRow
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvNumber"
+            android:text="0"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:gravity="center">
+        </TextView>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnRandom"
+            android:textSize="20sp"
+            android:text="Random từ 0 đến 9"
+            android:layout_weight="1"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:onClick="btnRandom1_Click">
+        </Button>
+    </TableRow>
+
+    <TableRow android:gravity="center">
+        <Button
+            android:layout_weight="1"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:textSize="20sp"
+            android:text="Random từ min đến max"
+            android:onClick="btnRandom2_Click">
+        </Button>
+    </TableRow>
+</TableLayout>
