@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -35,10 +36,21 @@ public class MainActivity extends AppCompatActivity {
         tvNumber.setText(number+"");
     }
     public void btnRandom2_Click(View v){
-        int min = Integer.parseInt(edtNum1.getText().toString());
-        int max = Integer.parseInt(edtNum2.getText().toString());
-        Random r = new Random();
-        int ketQuaRandom = r.nextInt((max - min + 1))  + min;
-        tvNumber.setText( ketQuaRandom + "");
+        String chuoi1 = edtNum1.getText().toString(), chuoi2 = edtNum2.getText().toString();
+        if(chuoi1.length() == 0 || chuoi2.length() == 0)
+            Toast.makeText(MainActivity.this, "Vui lòng nhập đủ số", Toast.LENGTH_SHORT).show();
+        else{
+            int min = Integer.parseInt(chuoi1);
+            int max = Integer.parseInt(chuoi2);
+            if(max < min){
+                int temp = max;
+                max = min;
+                min = temp;
+            }
+            Random r = new Random();
+            int ketQuaRandom = r.nextInt((max - min + 1))  + min;
+            tvNumber.setText( ketQuaRandom + "");
+        }
+
     }
 }
