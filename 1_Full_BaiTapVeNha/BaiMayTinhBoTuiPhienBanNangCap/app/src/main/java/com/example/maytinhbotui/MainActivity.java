@@ -20,13 +20,13 @@ public class MainActivity extends AppCompatActivity {
         lbl = (TextView)findViewById(R.id.lblChuoiDauVao);
         btnSo1 = (Button)findViewById(R.id.btnSo1);
         btnSo2 = (Button)findViewById(R.id.btnSo2);
-        btnSo3 = (Button)findViewById(R.id.btnSo3);
-        btnSo4 = (Button)findViewById(R.id.btnSo4);
-        btnSo5 = (Button)findViewById(R.id.btnSo5);
-        btnSo6 = (Button)findViewById(R.id.btnSo6);
-        btnSo7 = (Button)findViewById(R.id.btnSo7);
-        btnSo8 = (Button)findViewById(R.id.btnSo8);
-        btnSo9 = (Button)findViewById(R.id.btnSo9);
+//        btnSo3 = (Button)findViewById(R.id.btnSo3);
+//        btnSo4 = (Button)findViewById(R.id.btnSo4);
+//        btnSo5 = (Button)findViewById(R.id.btnSo5);
+//        btnSo6 = (Button)findViewById(R.id.btnSo6);
+//        btnSo7 = (Button)findViewById(R.id.btnSo7);
+//        btnSo8 = (Button)findViewById(R.id.btnSo8);
+//        btnSo9 = (Button)findViewById(R.id.btnSo9);
 
 
 
