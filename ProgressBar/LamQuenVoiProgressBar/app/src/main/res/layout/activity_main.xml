@@ -18,8 +18,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
-        android:secondaryProgress="20"
-        android:progress="10"
+        android:secondaryProgress="30"
+        android:progress="20"
         android:max="100"
         android:id="@+id/progressBar2"
         style="@android:style/Widget.ProgressBar.Horizontal"
