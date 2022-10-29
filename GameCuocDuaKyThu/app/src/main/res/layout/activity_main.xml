@@ -25,7 +25,7 @@
         android:layout_below="@+id/checkboxTwo">
     </CheckBox>
     <SeekBar
-        android:max="100"
+        android:max="200"
         android:thumb="@drawable/hinhxanh"
         android:layout_toRightOf="@+id/checkboxOne"
         android:layout_centerVertical="true"
@@ -34,7 +34,7 @@
         android:layout_height="70dp">
     </SeekBar>
     <SeekBar
-        android:max="100"
+        android:max="200"
         android:id="@+id/seekbarOne"
         android:thumb="@drawable/hinhdo"
         android:layout_above="@+id/seekbarTwo"
@@ -43,7 +43,7 @@
         android:layout_height="70dp">
     </SeekBar>
     <SeekBar
-        android:max="100"
+        android:max="200"
         android:id="@+id/seekbarThree"
         android:thumb="@drawable/hinhvang"
         android:layout_below="@+id/seekbarTwo"
@@ -79,6 +79,60 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/lblTieuDe">
     </TextView>
-
+    <TableLayout
+        android:layout_below="@+id/seekbarThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+        <TableRow>
+            <TextView
+                android:text="Điểm hiện tại của các nhân vật: "
+                android:textSize="10pt"
+                android:textColor="#8000FF">
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1">
+            </TextView>
+            <TextView
+                android:id="@+id/lblDiemNguoi1"
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:text="nhân vật 1: 0"
+                android:textSize="10pt"
+                android:textColor="#8000FF">
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1">
+            </TextView>
+            <TextView
+                android:id="@+id/lblDiemNguoi2"
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:text="nhân vật 2: 0"
+                android:textSize="10pt"
+                android:textColor="#8000FF">
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1">
+            </TextView>
+            <TextView
+                android:id="@+id/lblDiemNguoi3"
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:text="nhân vật 3: 0"
+                android:textSize="10pt"
+                android:textColor="#8000FF">
+            </TextView>
+        </TableRow>
+    </TableLayout>
 
 </RelativeLayout>
