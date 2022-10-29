@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long l) {
                 Random r = new Random();
                 int max = sb1.getMax();
-
                 if(sb1.getProgress() < max && sb2.getProgress() < max && sb3.getProgress() < max){
                     sb1.setProgress(sb1.getProgress() + r.nextInt(num));
                     sb2.setProgress(sb2.getProgress() + r.nextInt(num));
@@ -48,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     ThongBaoNguoiWinVaCapNhatDiem();
                     btnPlay.setVisibility(View.VISIBLE);
+                    BatCheckBox();
+                    BatSB();
                     this.cancel();
                 }
             }
@@ -63,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Vui lòng đặt cược trước khi chơi", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+                TatChetBox();
+                TatSB();
                 sb1.setProgress(0); sb2.setProgress(0); sb3.setProgress(0);
                 btnPlay.setVisibility(View.INVISIBLE);
                 countDownTimer.start();
@@ -148,6 +152,29 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void BatCheckBox(){
+        cb1.setEnabled(true);
+        cb2.setEnabled(true);
+        cb3.setEnabled(true);
+    }
+
+    public void TatChetBox(){
+        cb1.setEnabled(false);
+        cb2.setEnabled(false);
+        cb3.setEnabled(false);
+    }
+
+    public void BatSB(){
+        sb1.setEnabled(true);
+        sb2.setEnabled(true);
+        sb3.setEnabled(true);
+    }
+    public void TatSB(){
+        sb1.setEnabled(false);
+        sb2.setEnabled(false);
+        sb3.setEnabled(false);
     }
     public void anh_xa(){
         cb1 = (CheckBox) findViewById(R.id.checkboxOne);
