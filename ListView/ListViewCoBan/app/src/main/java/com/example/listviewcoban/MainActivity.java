@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -18,9 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
     ListView lvMonHoc;
     ArrayList<String> arrMonHoc;
-
+    EditText edtThem;
+    Button btnThem;
+    ArrayAdapter arrayAdapter;
     public void anh_xa(){
         lvMonHoc = (ListView) findViewById(R.id.listView_MonHoc);
+        btnThem = (Button) findViewById(R.id.btnThem);
+        edtThem = (EditText) findViewById(R.id.edtNoiDungThem);
     }
 
     @Override
@@ -36,9 +42,8 @@ public class MainActivity extends AppCompatActivity {
         arrMonHoc.add("Unity");
         arrMonHoc.add("Asb.net");
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, arrMonHoc);
+        arrayAdapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, arrMonHoc);
         lvMonHoc.setAdapter(arrayAdapter);
-
         ListOfEvens();
     }
     //----------------------------------------------- Phương thức -----------------------------------------------
@@ -88,6 +93,15 @@ public class MainActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 ShowAlertDialog("Long click", "Chỉ số long click là: " + i);
                 return false;
+            }
+        });
+
+        btnThem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String monhoc = edtThem.getText().toString();
+                arrMonHoc.add(monhoc);
+                arrayAdapter.notifyDataSetChanged();
             }
         });
     }
