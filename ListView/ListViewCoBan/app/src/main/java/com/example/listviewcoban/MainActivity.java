@@ -21,11 +21,13 @@ public class MainActivity extends AppCompatActivity {
     ListView lvMonHoc;
     ArrayList<String> arrMonHoc;
     EditText edtThem;
-    Button btnThem;
+    Button btnThem, btnSua;
     ArrayAdapter arrayAdapter;
+    int vitri;
     public void anh_xa(){
         lvMonHoc = (ListView) findViewById(R.id.listView_MonHoc);
         btnThem = (Button) findViewById(R.id.btnThem);
+        btnSua = (Button) findViewById(R.id.btnSua);
         edtThem = (EditText) findViewById(R.id.edtNoiDungThem);
     }
 
@@ -83,15 +85,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //i trả về vị trí người dùng click lên list view bắt đầu từ 0
-                Toast.makeText(MainActivity.this, "Chỉ số bạn click trên list view là: " + i, Toast.LENGTH_SHORT).show();
-                ShowAlertDialog("Click", arrMonHoc.get(i));
+//                Toast.makeText(MainActivity.this, "Chỉ số bạn click trên list view là: " + i, Toast.LENGTH_SHORT).show();
+//                ShowAlertDialog("Click", arrMonHoc.get(i));
+                edtThem.setText(arrMonHoc.get(i));
+                vitri = i;
             }
         });
 
         lvMonHoc.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                ShowAlertDialog("Long click", "Chỉ số long click là: " + i);
+               //howAlertDialog("Long click", "Chỉ số long click là: " + i);
+                arrMonHoc.remove(i);
+                arrayAdapter.notifyDataSetChanged();
                 return false;
             }
         });
@@ -101,6 +107,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String monhoc = edtThem.getText().toString();
                 arrMonHoc.add(monhoc);
+                arrayAdapter.notifyDataSetChanged();
+            }
+        });
+        btnSua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                arrMonHoc.set(vitri, edtThem.getText().toString());
                 arrayAdapter.notifyDataSetChanged();
             }
         });
