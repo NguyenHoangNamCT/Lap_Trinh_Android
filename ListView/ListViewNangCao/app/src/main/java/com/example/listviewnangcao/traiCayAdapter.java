@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class traiCayAdapter extends BaseAdapter {
-    private Context context; //là màn hình hiển thị
-    private int layout; //dạng layout muốn hiển thị
+public class traiCayAdapter extends BaseAdapter{
+    private Context context;
+    private int layout;
     private List<TraiCay> traiCayList;
 
     public traiCayAdapter(Context context, int layout, List<TraiCay> traiCayList) {
@@ -22,15 +22,12 @@ public class traiCayAdapter extends BaseAdapter {
     }
 
     @Override
-    public int getCount() //trả về số dòng để nó hiển thị cho list view
-    {
-        //return 0;
+    public int getCount() {
         return traiCayList.size();
     }
 
     @Override
-    public Object getItem(int i)
-    {
+    public Object getItem(int i) {
         return null;
     }
 
@@ -39,24 +36,22 @@ public class traiCayAdapter extends BaseAdapter {
         return 0;
     }
 
-
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) //trả về mỗi trên cái item của mình
-    {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    public View getView(int i, View view, ViewGroup viewGroup) {
+        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        view = inflater.inflate(layout, null);
+        view = layoutInflater.inflate(layout, null);
 
         //ánh xạ
-        TextView txtTen = (TextView) view.findViewById(R.id.textViewTen);
-        TextView txtMoTa = (TextView) view.findViewById(R.id.textViewMoTa);
-        ImageView imgHinh = (ImageView) view.findViewById(R.id.imageViewHinhAnh);
+        TextView txtTen = (TextView) view.findViewById(R.id.textViewTen), txtMoTa =(TextView) view.findViewById(R.id.textViewMoTa);
+        ImageView imgHinhTraiCay =(ImageView) view.findViewById(R.id.imageViewHinhAnh);
 
         TraiCay traiCay = traiCayList.get(i);
 
         txtTen.setText(traiCay.getTen());
         txtMoTa.setText(traiCay.getMoTa());
-        imgHinh.setImageResource(traiCay.getHinh());
+        imgHinhTraiCay.setImageResource(traiCay.getHinh());
+
         return view;
     }
 }
