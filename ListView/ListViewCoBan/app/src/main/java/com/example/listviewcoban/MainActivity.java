@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         arrayAdapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, arrMonHoc);
         lvMonHoc.setAdapter(arrayAdapter);
-        ListOfEvens();
+        ListOfEvens();//gọi phương thức chứa các sự kiện
     }
     //----------------------------------------------- Phương thức -----------------------------------------------
     public void ShowAlertDialog(String title, String Message){
@@ -79,8 +79,9 @@ public class MainActivity extends AppCompatActivity {
         // Show the Alert Dialog box
         alertDialog.show();
     }
+
     //----------------------------------------------- Sự kiện -----------------------------------------------
-    public void ListOfEvens(){
+    public void ListOfEvens(){//phương thức này là phương thức mình tự viết bên trong nó chứa các sự kiện
         lvMonHoc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -96,8 +97,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                //howAlertDialog("Long click", "Chỉ số long click là: " + i);
-                arrMonHoc.remove(i);
-                arrayAdapter.notifyDataSetChanged();
+                arrMonHoc.remove(i);//xoá phần tử trong mảng
+                arrayAdapter.notifyDataSetChanged();//load lại thay đổi
                 return false;
             }
         });
@@ -110,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 arrayAdapter.notifyDataSetChanged();
             }
         });
+
         btnSua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
