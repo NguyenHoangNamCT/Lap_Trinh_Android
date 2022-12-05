@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppToanCau</string>
+    <string name="text_TieuDe">Phiếu Thông Tin</string>
+    <string name="hint_HoTen">Nhập họ tên</string>
+    <string name="hint_Email">Nhập họ tên</string>
+    <string name="hint_SDT">Nhập số điện thoại</string>
+    <string name="buttonXacNhan_name">Xác nhận</string>
+</resources>
