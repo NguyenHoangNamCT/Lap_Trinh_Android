@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">AppToanCau</string>
-    <string name="text_TieuDe">Phiếu Thông Tin</string>
-    <string name="hint_HoTen">Nhập họ tên</string>
-    <string name="hint_Email">Nhập họ tên</string>
-    <string name="hint_SDT">Nhập số điện thoại</string>
-    <string name="buttonXacNhan_name">Xác nhận</string>
+    <string name="text_TieuDe">Information Form</string>
+    <string name="hint_HoTen">Enter your name</string>
+    <string name="hint_Email">Enter your email</string>
+    <string name="hint_SDT">Enter your phone number</string>
+    <string name="buttonXacNhan_name">Comfirm</string>
+    <string name="text_ChaoBan">Hello</string>
+    <string name="text_Email">Email</string>
+    <string name="text_SoDienThoai">Phone number</string>
 </resources>

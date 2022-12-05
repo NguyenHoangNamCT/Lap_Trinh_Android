@@ -24,11 +24,15 @@ public class MainActivity extends AppCompatActivity {
         btnXacNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String ten = edtHoTen.getText().toString() + '\n',
-                email = edtEmail.getText().toString() + '\n',
-                sdt = edtSoDienThoai.getText().toString();
+                String ten = ": " + edtHoTen.getText().toString() + '\n',
+                email = ": " + edtEmail.getText().toString() + '\n',
+                sdt = ": " + edtSoDienThoai.getText().toString();
 
-                tvThongTin.setText("Chào bạn: " + ten + "Email: " + email + "SĐT: " + sdt);
+                String textChao = getResources().getString(R.string.text_ChaoBan),
+                textEmail = getResources().getString(R.string.text_Email),
+                textSDT = getResources().getString(R.string.text_SoDienThoai);
+
+                tvThongTin.setText(textChao + ten + textEmail + email + textSDT + sdt);
             }
         });
     }
