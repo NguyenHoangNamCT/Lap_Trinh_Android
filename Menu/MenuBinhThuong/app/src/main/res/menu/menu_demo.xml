@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Setting"
+        android:id="@+id/menuSetting"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="always">
+    </item>
+
+    <item android:title="share"
+        android:id="@+id/menuShare"
+        android:orderInCategory="1">
+    </item>
+
+    <item android:title="Search"
+        android:id="@+id/menuSearch"
+        android:orderInCategory="3">
+    </item>
+
+    <item
+        android:title="Exit"
+        android:id="@+id/menuExit"
+        android:orderInCategory="2">
+    </item>
+
+    <item
+        android:title="Cài đặt"
+        android:id="@+id/menuCaiDat">
+        <menu>
+            <item
+                android:title="Hệ thống"
+                android:id="@+id/menuHeThong">
+            </item>
+            <item
+                android:title="Giao diện"
+                android:id="@+id/menuGiaoDien">
+            </item>
+            <item
+                android:title="Cử chỉ"
+                android:id="@+id/menuCuChi">
+            </item>
+        </menu>
+    </item>
+</menu>
