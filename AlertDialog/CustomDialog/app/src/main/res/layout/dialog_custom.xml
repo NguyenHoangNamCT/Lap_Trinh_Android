@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:weightSum="40"
+    android:padding="10dp"
+    android:background="#36FF00">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Đăng Nhập Hệ Thống"
+        android:textColor="#FA0370"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_weight="10">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:textSize="15sp"
+        android:hint="Username">
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:hint="Password"
+        android:textSize="15sp"
+        android:inputType="textPassword">
+    </EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:paddingHorizontal="51dp">
+        <Button
+            android:id="@+id/btnDangNhap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="Đăng nhập">
+        </Button>
+        <Button
+            android:id="@+id/btnHuy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:textSize="15sp"
+            android:text="Huỷ">
+        </Button>
+    </LinearLayout>
+</LinearLayout>
